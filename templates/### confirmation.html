@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<title>Vacation Trip Planner Confirmation</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<h1>Vacation Trip Planner Confirmation</h1>
+
+<h2>Package Details:</h2>
+<ul>
+<li><strong>Destination:</strong> {{ package.destination }}</li>
+<li><strong>Dates:</strong> {{ package.dates }}</li>
+<li><strong>Activities:</strong> {{ package.activities }}</li>
+<li><strong>Budget:</strong> {{ package.budget }}</li>
+</ul>
+
+<form action="/book_package" method="POST">
+<label for="payment_info">Payment Information:</label>
+<input type="text" id="payment_info" name="payment_info" placeholder="Credit Card Number" required />
+
+<input type="submit" value="Book Now" />
+</form>
+</body>
+
+</html>
+
+
