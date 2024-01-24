@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<title>Vacation Trip Planner Results</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<h1>Vacation Trip Planner Results</h1>
+
+<ul>
+{% for option in options %}
+<li>
+<h2>{{ option.destination }}</h2>
+<p><strong>Dates:</strong> {{ option.dates }}</p>
+<p><strong>Activities:</strong> {{ option.activities }}</p>
+<p><strong>Budget:</strong> {{ option.budget }}</p>
+<form action="/select_package" method="POST">
+<input type="hidden" name="package" value="{{ option.package_id }}" />
+<input type="submit" value="Select" />
+</form>
+</li>
+{% endfor %}
+</ul>
+</body>
+
+</html>
+
+
