@@ -1,0 +1,41 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<title>Vacation Trip Planner</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+<h1>Vacation Trip Planner</h1>
+<p>Plan your perfect vacation with our comprehensive trip planner.</p>
+
+<form action="/submit_preferences" method="POST">
+<label for="dates">Dates:</label>
+<input type="text" id="dates" name="dates" placeholder="mm/dd/yyyy - mm/dd/yyyy" required />
+
+<label for="destination">Destination:</label>
+<input type="text" id="destination" name="destination" placeholder="City, Country" required />
+
+<label for="activities">Activities:</label>
+<ul>
+<li><input type="checkbox" id="activity-sightseeing" name="activities" value="sightseeing" /> Sightseeing</li>
+<li><input type="checkbox" id="activity-hiking" name="activities" value="hiking" /> Hiking</li>
+<li><input type="checkbox" id="activity-beach" name="activities" value="beach" /> Beach</li>
+<li><input type="checkbox" id="activity-food" name="activities" value="food" /> Food</li>
+<li><input type="checkbox" id="activity-culture" name="activities" value="culture" /> Culture</li>
+</ul>
+
+<label for="budget">Budget:</label>
+<input type="number" id="budget" name="budget" placeholder="$" required />
+
+<input type="submit" value="Submit" />
+</form>
+</body>
+
+</html>
+
+
